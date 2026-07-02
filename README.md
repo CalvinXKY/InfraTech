@@ -92,15 +92,20 @@
 | [1.3x提升:vLLM推理的Swap特性实践](https://zhuanlan.zhihu.com/p/1999536171961828862)                 | vLLM    |
 | [PD分离+弹性伸缩/角色切换的实践笔记](https://zhuanlan.zhihu.com/p/2026227681419600454)                 | vLLM    |
 
-## 🛠️辅助工具
+## RL框架
 
-| 📚 文章                                                                             | 📖 知识分类 | 🌐 链接                                                                                 |
-|:----------------------------------------------------------------------------------|:--------|:--------------------------------------------------------------------------------------|
-| [LLM大模型显存计算公式与优化](https://zhuanlan.zhihu.com/p/687226668)                         | LLM     | 🔥🔥🔥                                                                                |
-| [LLM预训练模型MFU计算器](https://zhuanlan.zhihu.com/p/20401860293)                        | LLM     | [link](https://calvinxky.github.io/mfu_calculation/)                                  |
-| [DeepSeekV3 MFU计算工具与算式](https://zhuanlan.zhihu.com/p/26107304514)                 | LLM     | [link](https://calvinxky.github.io/mfu_calculation/deepseek3mfu.html)                 |
-| [PyTorch显存可视化与Snapshot数据分析](https://zhuanlan.zhihu.com/p/677203832)               | PyTorch | [link](https://github.com/CalvinXKY/BasicCUDA/tree/master/pytorch/torch_mem_snapshot) |
-| [PyTorch结构可视化：交互式DeepSeekV3计算图](https://zhuanlan.zhihu.com/p/1977414887736112704) | PyTorch | [link](./pytorch_vista)                                                               |
+| 📚  文章                                                                                           | 📖 知识分类 | 📜 备注                                              |
+|:-------------------------------------------------------------------------------------------------|:--------|:---------------------------------------------------|
+| [vime：融合slime与vLLM的RL框架](https://zhuanlan.zhihu.com/p/2047767807237141302)                       | vime    | 🔥🔥                                               |
+| [vime×Ascend：共卡模式适配与实践](https://zhuanlan.zhihu.com/p/2050254430709272722)                        | vime    | 🔥                                                 |
+| [MoE-RL训推一致性：R3原理与性能验证](https://zhuanlan.zhihu.com/p/2052417693177864733)                       | vime    | 🔥🔥                                               |
+| [vime+MemAgent：记忆智能体的RL后训练](https://zhuanlan.zhihu.com/p/2052871664728380768)                    | vime    | 🔥                                                 |
+| [教你训一个会调用工具的Agent：RL τ-bench](https://zhuanlan.zhihu.com/p/2053877694224392348)                  | vime    | 🔥                                                 |
+| [Slime适配vLLM后端的实践笔记](https://zhuanlan.zhihu.com/p/2033132330064285846)                            | slime   | 🔥                                                 |
+| [RL共卡权重同步：vLLM与训练框架之间的IPC实践](https://zhuanlan.zhihu.com/p/2044116178860298908)                  | 权重同步    | 🔥                                                 |
+| [Slime非共卡下的权重同步优化：P2P分片](https://zhuanlan.zhihu.com/p/2055241439756525802)                      | 权重同步    | 🔥                                                 |
+| [图解Infra视角下的强化学习性能问题(浅析)](https://zhuanlan.zhihu.com/p/1986888818738086656)                     | RL基础    | 🔥                                                 |
+| [RL训推调度与切换（Megatron⇄SGLang）机制解析](https://zhuanlan.zhihu.com/p/2028552054742763264)                | RL基础    | 🔥 [练习](./rl/training_infer_colocate.ipynb)        |
 
 ## 训练框架与基础知识
 
@@ -113,8 +118,6 @@
 | [PyTorch显存管理介绍与源码解析（三）](https://zhuanlan.zhihu.com/p/692614846)                                                       | 训练框架    | 🔥                                                                                             |
 | [PyTorch分布式训练基础--DDP使用](https://zhuanlan.zhihu.com/p/358974461)                                                       | 训练框架    | 🔥🔥🔥                                                                                         |
 | [Context Parallelism的原理与代码浅析](https://zhuanlan.zhihu.com/p/698447429)                                                 | 并行训练    | 🔥🔥🔥                                                                                         |
-| [图解Infra视角下的强化学习性能问题(浅析)](https://zhuanlan.zhihu.com/p/1986888818738086656)                                           | RL训练    | 🔥                                                                                             |
-| [RL训推调度与切换（Megatron⇄SGLang）机制解析](https://zhuanlan.zhihu.com/p/2028552054742763264)                                      | RL训练    | 🔥                                                                                             |
 | [FP8计算在模型训练中的应用](https://zhuanlan.zhihu.com/p/26825649731)                                                            | 量化训练    | 🔥                                                                                             |
 | [PyTorch中基于CUDA IPC的进程间Tensor共享简介](https://zhuanlan.zhihu.com/p/2019510762004050171)                                  | 训练框架    | 🔥                                                                                             |
 
@@ -123,12 +126,14 @@
 | 📚  文章                                                                                                             | 📖 知识分类     | 📜 备注                                                     |
 |:-------------------------------------------------------------------------------------------------------------------|:------------|:----------------------------------------------------------|
 | [彻底搞懂RoPE计算原理：从1D到3D](https://zhuanlan.zhihu.com/p/2023493768003724514)                                            | Attention   | [代码](./models/modules/rope_principle.ipynb)               |
+| [DeepSeekV4中RoPE设计解析](https://zhuanlan.zhihu.com/p/2029134107490132079)                                              | Attention   | 🔥🔥                                                      |
 | [超细图解MLA计算流&吸收矩阵对比分析](https://zhuanlan.zhihu.com/p/1948769945132470860)                                            | Attention   | [高清图](./deepseek_v3)                                      |
 | [超细图解DSA计算流&性能对比与优化分析](https://zhuanlan.zhihu.com/p/1963371483985319543)                                           | Attention   | [高清图](./deepseek_v3)                                      |
 | [用注意力知识分析DSA(DeepSeek Sparse Attention)的设计逻辑](https://zhuanlan.zhihu.com/p/1962162900111172920)                    | Attention   | 🔥🔥                                                      |
 | [线性注意力(LinearAttention)的原理与细节(AlphaDeltaGate)解析](https://zhuanlan.zhihu.com/p/1969419528065773811)                 | Linear      | 🔥                                                        |
 | [Qwen3 VL多模态解析](https://zhuanlan.zhihu.com/p/2023058271653602626)                                                       | 大模型      | 🔥                                                        |
 | [VLM视觉-语言融合流程解析（Kimi K2.5/VL）](https://zhuanlan.zhihu.com/p/2018404307385500510)                                    | 大模型      | 🔥                                                        |
+| [DeepSeek V4 哪些亮点值得关注？](https://www.zhihu.com/question/2030963929510310856/answer/2031734018199270833)              | 大模型      | 🔥🔥                                                      |
 | [入门基础：分布式训练/推理基础：集合通信原理与实践](https://zhuanlan.zhihu.com/p/2006011081177457311)                                      | 分布式基础       | [练习](deeplearning_framework/collective_operations.ipynb)  |
 | [入门基础：手写最基础的训练过程](https://zhuanlan.zhihu.com/p/687327516)                                                          | 深度学习        | 🔥                                                        |
 | [入门基础：梯度近似运算与雅可比(Jacobian)矩阵](https://zhuanlan.zhihu.com/p/687815257)                                              | 深度学习        | -                                                         |
@@ -151,6 +156,16 @@
 | [Qwen3-VL](./models/qwen3_vl)             | Dense+MoE+DeepStack+Interleaved-MRoPE | [link](./models/qwen3_vl/README.md)        |
 | [Qwen3.5](./models/qwen3_5)               | Gated DeltaNet+Gated Attention+MoE | [link](./models/qwen3_5/README.md)        | 
 | [Step 3.5 Flash](./models/step_3_5_flash) | GQA+SWA+MoE+MTP                    | [link](./models/step_3_5_flash/README.md) | 
+
+## 🛠️辅助工具
+
+| 📚 文章                                                                             | 📖 知识分类 | 🌐 链接                                                                                 |
+|:----------------------------------------------------------------------------------|:--------|:--------------------------------------------------------------------------------------|
+| [LLM大模型显存计算公式与优化](https://zhuanlan.zhihu.com/p/687226668)                         | LLM     | 🔥🔥🔥                                                                                |
+| [LLM预训练模型MFU计算器](https://zhuanlan.zhihu.com/p/20401860293)                        | LLM     | [link](https://calvinxky.github.io/mfu_calculation/)                                  |
+| [DeepSeekV3 MFU计算工具与算式](https://zhuanlan.zhihu.com/p/26107304514)                 | LLM     | [link](https://calvinxky.github.io/mfu_calculation/deepseek3mfu.html)                 |
+| [PyTorch显存可视化与Snapshot数据分析](https://zhuanlan.zhihu.com/p/677203832)               | PyTorch | [link](https://github.com/CalvinXKY/BasicCUDA/tree/master/pytorch/torch_mem_snapshot) |
+| [PyTorch结构可视化：交互式DeepSeekV3计算图](https://zhuanlan.zhihu.com/p/1977414887736112704) | PyTorch | [link](./pytorch_vista)                                                               |
 
 ## GPU基础知识
 
