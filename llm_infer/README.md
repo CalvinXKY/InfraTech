@@ -8,6 +8,7 @@
 | ulysses_mha_demo.ipynb                      | 并行推理        | [推理Ulysses并行优化与DeepSeekV3/V3.2实践](https://zhuanlan.zhihu.com/p/1995776941110878482)                                 | ⚡️   |
 | LLM_sampling.ipynb                          | 推理基础        | [LLM推理采样(Sampling)常见知识概览](https://zhuanlan.zhihu.com/p/1981752176578667658)                                         | ⚡️   |
 | speculative_decoding.ipynb                  | 推理基础        | [投机推理的原理与常见方案](https://zhuanlan.zhihu.com/p/1978037808544370747)                                                    | ⚡️   |
+| dflash_dspark_principle.ipynb               | 推理基础        | [快速理解并行投机解码(DFlash/DSpark)](https://zhuanlan.zhihu.com/p/2069029506447417522)                                      | ⚡️⚡️ |
 | zmq_practice.ipynb                          | 推理基础        | -                                                                                                                   | ⚡️   |
 | kv_cache_transfer_vs_recomputation.ipynb    | 推理基础        | [KV cache用池化的数据会比重算更快吗？](https://www.zhihu.com/question/1954115162412942829/answer/1964780161137381481)             | ⚡️⚡️ |
 | linear_attention_kv_cache_size.ipynb        | 推理基础        | [LinearAttention在KV cache的存储上有多大优势？](https://www.zhihu.com/question/1974064489159730057/answer/1974067690864928547) | ⚡️   |
