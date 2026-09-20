@@ -1,0 +1,2784 @@
+[
+  {
+    "side": 0,
+    "root": "diagram_original",
+    "nodes": [
+      {
+        "id": "encoder_input",
+        "label": "Inputs",
+        "x": -2.8,
+        "y": 0.2,
+        "w": 3.7,
+        "h": 0.65,
+        "color": "E3E6EB",
+        "branch": "",
+        "part": "",
+        "layer": 0,
+        "kind": "text",
+        "size": 13
+      },
+      {
+        "id": "encoder_embed",
+        "label": "Input\nEmbedding",
+        "x": -2.8,
+        "y": 1.65,
+        "w": 3.1,
+        "h": 1.02,
+        "color": "F5D6D7",
+        "branch": "encoder",
+        "part": "embedding",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "encoder_plus",
+        "label": "",
+        "x": -2.8,
+        "y": 3.05,
+        "w": 3.1,
+        "h": 0.78,
+        "color": "E3E6EB",
+        "branch": "encoder",
+        "part": "position",
+        "layer": 0,
+        "kind": "plus",
+        "size": 13
+      },
+      {
+        "id": "encoder_position",
+        "label": "",
+        "x": -4.0,
+        "y": 3.05,
+        "w": 3.1,
+        "h": 0.78,
+        "color": "E3E6EB",
+        "branch": "encoder",
+        "part": "position",
+        "layer": 0,
+        "kind": "position",
+        "size": 13
+      },
+      {
+        "id": "encoder_position_label",
+        "label": "Positional\nencoding",
+        "x": -5.85,
+        "y": 3.05,
+        "w": 2.3,
+        "h": 0.7,
+        "color": "E3E6EB",
+        "branch": "encoder",
+        "part": "position",
+        "layer": 0,
+        "kind": "text",
+        "size": 12
+      },
+      {
+        "id": "encoder_attention",
+        "label": "Multi-Head\nAttention",
+        "x": -2.8,
+        "y": 4.95,
+        "w": 3.1,
+        "h": 1.2,
+        "color": "F7D9A8",
+        "branch": "encoder",
+        "part": "attention",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "encoder_norm1",
+        "label": "Add & Norm",
+        "x": -2.8,
+        "y": 6.13,
+        "w": 3.1,
+        "h": 0.54,
+        "color": "EFF0B9",
+        "branch": "encoder",
+        "part": "residual",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "encoder_ffn",
+        "label": "Feed\nForward",
+        "x": -2.8,
+        "y": 8.03,
+        "w": 3.1,
+        "h": 1.05,
+        "color": "BFE3EF",
+        "branch": "encoder",
+        "part": "ffn",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "encoder_norm2",
+        "label": "Add & Norm",
+        "x": -2.8,
+        "y": 9.16,
+        "w": 3.1,
+        "h": 0.54,
+        "color": "EFF0B9",
+        "branch": "encoder",
+        "part": "residual",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_input",
+        "label": "Outputs\n(shifted right)",
+        "x": 2.8,
+        "y": 0.2,
+        "w": 3.7,
+        "h": 0.65,
+        "color": "E3E6EB",
+        "branch": "",
+        "part": "",
+        "layer": 0,
+        "kind": "text",
+        "size": 13
+      },
+      {
+        "id": "decoder_embed",
+        "label": "Output\nEmbedding",
+        "x": 2.8,
+        "y": 1.65,
+        "w": 3.1,
+        "h": 1.02,
+        "color": "F5D6D7",
+        "branch": "decoder",
+        "part": "embedding",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_plus",
+        "label": "",
+        "x": 2.8,
+        "y": 3.05,
+        "w": 3.1,
+        "h": 0.78,
+        "color": "E3E6EB",
+        "branch": "decoder",
+        "part": "position",
+        "layer": 0,
+        "kind": "plus",
+        "size": 13
+      },
+      {
+        "id": "decoder_position",
+        "label": "",
+        "x": 4.0,
+        "y": 3.05,
+        "w": 3.1,
+        "h": 0.78,
+        "color": "E3E6EB",
+        "branch": "decoder",
+        "part": "position",
+        "layer": 0,
+        "kind": "position",
+        "size": 13
+      },
+      {
+        "id": "decoder_position_label",
+        "label": "Positional\nencoding",
+        "x": 5.85,
+        "y": 3.05,
+        "w": 2.3,
+        "h": 0.7,
+        "color": "E3E6EB",
+        "branch": "decoder",
+        "part": "position",
+        "layer": 0,
+        "kind": "text",
+        "size": 12
+      },
+      {
+        "id": "decoder_attention",
+        "label": "Masked\nMulti-Head\nAttention",
+        "x": 2.8,
+        "y": 4.95,
+        "w": 3.1,
+        "h": 1.5,
+        "color": "F7D9A8",
+        "branch": "decoder",
+        "part": "attention",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_norm1",
+        "label": "Add & Norm",
+        "x": 2.8,
+        "y": 6.13,
+        "w": 3.1,
+        "h": 0.54,
+        "color": "EFF0B9",
+        "branch": "decoder",
+        "part": "residual",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_ffn",
+        "label": "Feed\nForward",
+        "x": 2.8,
+        "y": 10.93,
+        "w": 3.1,
+        "h": 1.05,
+        "color": "BFE3EF",
+        "branch": "decoder",
+        "part": "ffn",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_norm3",
+        "label": "Add & Norm",
+        "x": 2.8,
+        "y": 12.1,
+        "w": 3.1,
+        "h": 0.54,
+        "color": "EFF0B9",
+        "branch": "decoder",
+        "part": "residual",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_cross",
+        "label": "Multi-Head\nAttention",
+        "x": 2.8,
+        "y": 7.95,
+        "w": 3.1,
+        "h": 1.15,
+        "color": "F7D9A8",
+        "branch": "decoder",
+        "part": "cross",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_norm2",
+        "label": "Add & Norm",
+        "x": 2.8,
+        "y": 9.13,
+        "w": 3.1,
+        "h": 0.54,
+        "color": "EFF0B9",
+        "branch": "decoder",
+        "part": "residual",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "kv_label",
+        "label": "K, V",
+        "x": 0.25,
+        "y": 10.73,
+        "w": 1,
+        "h": 0.4,
+        "color": "E3E6EB",
+        "branch": "",
+        "part": "memory",
+        "layer": 0,
+        "kind": "text",
+        "size": 12
+      },
+      {
+        "id": "linear",
+        "label": "Linear",
+        "x": 2.8,
+        "y": 14.15,
+        "w": 3.1,
+        "h": 0.57,
+        "color": "D8D8E9",
+        "branch": "",
+        "part": "head",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "softmax",
+        "label": "Softmax",
+        "x": 2.8,
+        "y": 15.3,
+        "w": 3.1,
+        "h": 0.57,
+        "color": "CCE5CB",
+        "branch": "",
+        "part": "head",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "probabilities",
+        "label": "Output\nprobabilities",
+        "x": 2.8,
+        "y": 16.75,
+        "w": 3.7,
+        "h": 0.8,
+        "color": "E3E6EB",
+        "branch": "",
+        "part": "head",
+        "layer": 0,
+        "kind": "text",
+        "size": 13
+      }
+    ],
+    "edges": [
+      {
+        "id": "encoder_input_edge",
+        "path": [
+          [
+            -2.8,
+            0.7
+          ],
+          [
+            -2.8,
+            1.1
+          ]
+        ],
+        "source": "encoder_input",
+        "target": "encoder_embed",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -2.8,
+            0.7,
+            0.55
+          ],
+          [
+            -2.8,
+            1.1,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_embedding_edge",
+        "path": [
+          [
+            -2.8,
+            2.16
+          ],
+          [
+            -2.8,
+            2.8
+          ]
+        ],
+        "source": "encoder_embed",
+        "target": "encoder_plus",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -2.8,
+            2.16,
+            0.55
+          ],
+          [
+            -2.8,
+            2.8,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_position_edge",
+        "path": [
+          [
+            -3.58,
+            3.05
+          ],
+          [
+            -3.04,
+            3.05
+          ]
+        ],
+        "source": "encoder_position",
+        "target": "encoder_plus",
+        "role": "position",
+        "spatial_path": [
+          [
+            -3.58,
+            3.05,
+            0.55
+          ],
+          [
+            -3.04,
+            3.05,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_attention_input",
+        "path": [
+          [
+            -2.8,
+            3.3
+          ],
+          [
+            -2.8,
+            4.3500000000000005
+          ]
+        ],
+        "source": "encoder_plus",
+        "target": "encoder_attention",
+        "role": "query",
+        "spatial_path": [
+          [
+            -2.8,
+            3.3,
+            0.55
+          ],
+          [
+            -2.8,
+            4.3500000000000005,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_self_0",
+        "path": [
+          [
+            -2.8,
+            3.64
+          ],
+          [
+            -3.9,
+            3.64
+          ],
+          [
+            -3.9,
+            4.3500000000000005
+          ]
+        ],
+        "source": "encoder_plus",
+        "target": "encoder_attention",
+        "role": "key_value",
+        "spatial_path": [
+          [
+            -2.8,
+            3.64,
+            0.55
+          ],
+          [
+            -3.9,
+            3.64,
+            0.72
+          ],
+          [
+            -3.9,
+            4.3500000000000005,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_self_1",
+        "path": [
+          [
+            -2.8,
+            3.64
+          ],
+          [
+            -1.6999999999999997,
+            3.64
+          ],
+          [
+            -1.6999999999999997,
+            4.3500000000000005
+          ]
+        ],
+        "source": "encoder_plus",
+        "target": "encoder_attention",
+        "role": "key_value",
+        "spatial_path": [
+          [
+            -2.8,
+            3.64,
+            0.55
+          ],
+          [
+            -1.6999999999999997,
+            3.64,
+            0.72
+          ],
+          [
+            -1.6999999999999997,
+            4.3500000000000005,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_attention_norm",
+        "path": [
+          [
+            -2.8,
+            5.55
+          ],
+          [
+            -2.8,
+            5.859999999999999
+          ]
+        ],
+        "source": "encoder_attention",
+        "target": "encoder_norm1",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -2.8,
+            5.55,
+            0.55
+          ],
+          [
+            -2.8,
+            5.859999999999999,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_residual_attention",
+        "path": [
+          [
+            -2.8,
+            3.64
+          ],
+          [
+            -4.75,
+            3.64
+          ],
+          [
+            -4.75,
+            6.13
+          ],
+          [
+            -4.35,
+            6.13
+          ]
+        ],
+        "source": "encoder_plus",
+        "target": "encoder_norm1",
+        "role": "residual",
+        "spatial_path": [
+          [
+            -2.8,
+            3.64,
+            0.55
+          ],
+          [
+            -4.75,
+            3.64,
+            1.28
+          ],
+          [
+            -4.75,
+            6.13,
+            1.28
+          ],
+          [
+            -4.35,
+            6.13,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_ffn_input",
+        "path": [
+          [
+            -2.8,
+            6.4
+          ],
+          [
+            -2.8,
+            7.504999999999999
+          ]
+        ],
+        "source": "encoder_norm1",
+        "target": "encoder_ffn",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -2.8,
+            6.4,
+            0.55
+          ],
+          [
+            -2.8,
+            7.504999999999999,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_ffn_norm",
+        "path": [
+          [
+            -2.8,
+            8.555
+          ],
+          [
+            -2.8,
+            8.89
+          ]
+        ],
+        "source": "encoder_ffn",
+        "target": "encoder_norm2",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -2.8,
+            8.555,
+            0.55
+          ],
+          [
+            -2.8,
+            8.89,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_residual_ffn",
+        "path": [
+          [
+            -2.8,
+            7.2299999999999995
+          ],
+          [
+            -4.75,
+            7.2299999999999995
+          ],
+          [
+            -4.75,
+            9.16
+          ],
+          [
+            -4.35,
+            9.16
+          ]
+        ],
+        "source": "encoder_norm1",
+        "target": "encoder_norm2",
+        "role": "residual",
+        "spatial_path": [
+          [
+            -2.8,
+            7.2299999999999995,
+            0.55
+          ],
+          [
+            -4.75,
+            7.2299999999999995,
+            1.28
+          ],
+          [
+            -4.75,
+            9.16,
+            1.28
+          ],
+          [
+            -4.35,
+            9.16,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_input_edge",
+        "path": [
+          [
+            2.8,
+            0.7
+          ],
+          [
+            2.8,
+            1.1
+          ]
+        ],
+        "source": "decoder_input",
+        "target": "decoder_embed",
+        "role": "flow",
+        "spatial_path": [
+          [
+            2.8,
+            0.7,
+            0.55
+          ],
+          [
+            2.8,
+            1.1,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_embedding_edge",
+        "path": [
+          [
+            2.8,
+            2.16
+          ],
+          [
+            2.8,
+            2.8
+          ]
+        ],
+        "source": "decoder_embed",
+        "target": "decoder_plus",
+        "role": "flow",
+        "spatial_path": [
+          [
+            2.8,
+            2.16,
+            0.55
+          ],
+          [
+            2.8,
+            2.8,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_position_edge",
+        "path": [
+          [
+            3.58,
+            3.05
+          ],
+          [
+            3.04,
+            3.05
+          ]
+        ],
+        "source": "decoder_position",
+        "target": "decoder_plus",
+        "role": "position",
+        "spatial_path": [
+          [
+            3.58,
+            3.05,
+            0.55
+          ],
+          [
+            3.04,
+            3.05,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_attention_input",
+        "path": [
+          [
+            2.8,
+            3.3
+          ],
+          [
+            2.8,
+            4.2
+          ]
+        ],
+        "source": "decoder_plus",
+        "target": "decoder_attention",
+        "role": "query",
+        "spatial_path": [
+          [
+            2.8,
+            3.3,
+            0.55
+          ],
+          [
+            2.8,
+            4.2,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_self_0",
+        "path": [
+          [
+            2.8,
+            3.64
+          ],
+          [
+            1.6999999999999997,
+            3.64
+          ],
+          [
+            1.6999999999999997,
+            4.2
+          ]
+        ],
+        "source": "decoder_plus",
+        "target": "decoder_attention",
+        "role": "key_value",
+        "spatial_path": [
+          [
+            2.8,
+            3.64,
+            0.55
+          ],
+          [
+            1.6999999999999997,
+            3.64,
+            0.72
+          ],
+          [
+            1.6999999999999997,
+            4.2,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_self_1",
+        "path": [
+          [
+            2.8,
+            3.64
+          ],
+          [
+            3.9,
+            3.64
+          ],
+          [
+            3.9,
+            4.2
+          ]
+        ],
+        "source": "decoder_plus",
+        "target": "decoder_attention",
+        "role": "key_value",
+        "spatial_path": [
+          [
+            2.8,
+            3.64,
+            0.55
+          ],
+          [
+            3.9,
+            3.64,
+            0.72
+          ],
+          [
+            3.9,
+            4.2,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_attention_norm",
+        "path": [
+          [
+            2.8,
+            5.7
+          ],
+          [
+            2.8,
+            5.859999999999999
+          ]
+        ],
+        "source": "decoder_attention",
+        "target": "decoder_norm1",
+        "role": "flow",
+        "spatial_path": [
+          [
+            2.8,
+            5.7,
+            0.55
+          ],
+          [
+            2.8,
+            5.859999999999999,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_residual_attention",
+        "path": [
+          [
+            2.8,
+            3.64
+          ],
+          [
+            4.75,
+            3.64
+          ],
+          [
+            4.75,
+            6.13
+          ],
+          [
+            4.35,
+            6.13
+          ]
+        ],
+        "source": "decoder_plus",
+        "target": "decoder_norm1",
+        "role": "residual",
+        "spatial_path": [
+          [
+            2.8,
+            3.64,
+            0.55
+          ],
+          [
+            4.75,
+            3.64,
+            1.28
+          ],
+          [
+            4.75,
+            6.13,
+            1.28
+          ],
+          [
+            4.35,
+            6.13,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_cross_query",
+        "path": [
+          [
+            2.8,
+            6.4
+          ],
+          [
+            2.8,
+            6.95
+          ],
+          [
+            3.9,
+            6.95
+          ],
+          [
+            3.9,
+            7.375
+          ]
+        ],
+        "source": "decoder_norm1",
+        "target": "decoder_cross",
+        "role": "query",
+        "spatial_path": [
+          [
+            2.8,
+            6.4,
+            0.55
+          ],
+          [
+            2.8,
+            6.95,
+            0.72
+          ],
+          [
+            3.9,
+            6.95,
+            0.72
+          ],
+          [
+            3.9,
+            7.375,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_cross_norm",
+        "path": [
+          [
+            2.8,
+            8.525
+          ],
+          [
+            2.8,
+            8.86
+          ]
+        ],
+        "source": "decoder_cross",
+        "target": "decoder_norm2",
+        "role": "flow",
+        "spatial_path": [
+          [
+            2.8,
+            8.525,
+            0.55
+          ],
+          [
+            2.8,
+            8.86,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_residual_cross",
+        "path": [
+          [
+            2.8,
+            6.7
+          ],
+          [
+            4.75,
+            6.7
+          ],
+          [
+            4.75,
+            9.13
+          ],
+          [
+            4.35,
+            9.13
+          ]
+        ],
+        "source": "decoder_norm1",
+        "target": "decoder_norm2",
+        "role": "residual",
+        "spatial_path": [
+          [
+            2.8,
+            6.7,
+            0.55
+          ],
+          [
+            4.75,
+            6.7,
+            1.28
+          ],
+          [
+            4.75,
+            9.13,
+            1.28
+          ],
+          [
+            4.35,
+            9.13,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_ffn_input",
+        "path": [
+          [
+            2.8,
+            9.4
+          ],
+          [
+            2.8,
+            10.405
+          ]
+        ],
+        "source": "decoder_norm2",
+        "target": "decoder_ffn",
+        "role": "flow",
+        "spatial_path": [
+          [
+            2.8,
+            9.4,
+            0.55
+          ],
+          [
+            2.8,
+            10.405,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_ffn_norm",
+        "path": [
+          [
+            2.8,
+            11.455
+          ],
+          [
+            2.8,
+            11.83
+          ]
+        ],
+        "source": "decoder_ffn",
+        "target": "decoder_norm3",
+        "role": "flow",
+        "spatial_path": [
+          [
+            2.8,
+            11.455,
+            0.55
+          ],
+          [
+            2.8,
+            11.83,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_residual_ffn",
+        "path": [
+          [
+            2.8,
+            10.129999999999999
+          ],
+          [
+            4.75,
+            10.129999999999999
+          ],
+          [
+            4.75,
+            12.1
+          ],
+          [
+            4.35,
+            12.1
+          ]
+        ],
+        "source": "decoder_norm2",
+        "target": "decoder_norm3",
+        "role": "residual",
+        "spatial_path": [
+          [
+            2.8,
+            10.129999999999999,
+            0.55
+          ],
+          [
+            4.75,
+            10.129999999999999,
+            1.28
+          ],
+          [
+            4.75,
+            12.1,
+            1.28
+          ],
+          [
+            4.35,
+            12.1,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_to_decoder_0",
+        "path": [
+          [
+            -2.8,
+            9.43
+          ],
+          [
+            -2.8,
+            10.4
+          ],
+          [
+            -0.05,
+            10.4
+          ],
+          [
+            -0.05,
+            6.95
+          ],
+          [
+            1.7499999999999998,
+            6.95
+          ],
+          [
+            1.7499999999999998,
+            7.375
+          ]
+        ],
+        "source": "encoder_norm2",
+        "target": "decoder_cross",
+        "role": "key",
+        "spatial_path": [
+          [
+            -2.8,
+            9.43,
+            0.55
+          ],
+          [
+            -2.8,
+            10.4,
+            1.7
+          ],
+          [
+            -0.05,
+            10.4,
+            1.7
+          ],
+          [
+            -0.05,
+            6.95,
+            1.7
+          ],
+          [
+            1.7499999999999998,
+            6.95,
+            1.7
+          ],
+          [
+            1.7499999999999998,
+            7.375,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_to_decoder_1",
+        "path": [
+          [
+            -2.8,
+            9.43
+          ],
+          [
+            -2.8,
+            10.4
+          ],
+          [
+            -0.05,
+            10.4
+          ],
+          [
+            -0.05,
+            6.95
+          ],
+          [
+            2.6999999999999997,
+            6.95
+          ],
+          [
+            2.6999999999999997,
+            7.375
+          ]
+        ],
+        "source": "encoder_norm2",
+        "target": "decoder_cross",
+        "role": "value",
+        "spatial_path": [
+          [
+            -2.8,
+            9.43,
+            0.55
+          ],
+          [
+            -2.8,
+            10.4,
+            1.7
+          ],
+          [
+            -0.05,
+            10.4,
+            1.7
+          ],
+          [
+            -0.05,
+            6.95,
+            1.7
+          ],
+          [
+            2.6999999999999997,
+            6.95,
+            1.7
+          ],
+          [
+            2.6999999999999997,
+            7.375,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_to_linear",
+        "path": [
+          [
+            2.8,
+            12.37
+          ],
+          [
+            2.8,
+            13.865
+          ]
+        ],
+        "source": "decoder_norm3",
+        "target": "linear",
+        "role": "flow",
+        "spatial_path": [
+          [
+            2.8,
+            12.37,
+            0.55
+          ],
+          [
+            2.8,
+            13.865,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "linear_to_softmax",
+        "path": [
+          [
+            2.8,
+            14.435
+          ],
+          [
+            2.8,
+            15.015
+          ]
+        ],
+        "source": "linear",
+        "target": "softmax",
+        "role": "flow",
+        "spatial_path": [
+          [
+            2.8,
+            14.435,
+            0.55
+          ],
+          [
+            2.8,
+            15.015,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "softmax_to_output",
+        "path": [
+          [
+            2.8,
+            15.585
+          ],
+          [
+            2.8,
+            16.22
+          ]
+        ],
+        "source": "softmax",
+        "target": "probabilities",
+        "role": "flow",
+        "spatial_path": [
+          [
+            2.8,
+            15.585,
+            0.55
+          ],
+          [
+            2.8,
+            16.22,
+            0.55
+          ]
+        ]
+      }
+    ],
+    "frames": [
+      {
+        "id": "encoder_repeat",
+        "x": -2.8,
+        "y": 7.25,
+        "w": 4.55,
+        "h": 6.6,
+        "label": "N\u00d7",
+        "tx": -5.42,
+        "ty": 7.25,
+        "branch": "encoder",
+        "layer": 0,
+        "dashed": false
+      },
+      {
+        "id": "decoder_repeat",
+        "x": 2.8,
+        "y": 8.65,
+        "w": 4.55,
+        "h": 9.4,
+        "label": "N\u00d7",
+        "tx": 5.42,
+        "ty": 8.65,
+        "branch": "decoder",
+        "layer": 0,
+        "dashed": false
+      }
+    ],
+    "bounds": [
+      -6.7,
+      6.7,
+      -0.65,
+      17.5
+    ]
+  },
+  {
+    "side": 1,
+    "root": "diagram_deepseek",
+    "nodes": [
+      {
+        "id": "text_embedding",
+        "label": "Text\nembedding",
+        "x": -3.2,
+        "y": 1.12,
+        "w": 3.1,
+        "h": 0.95,
+        "color": "F5D6D7",
+        "branch": "",
+        "part": "embedding",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "vision_encoder",
+        "label": "Vision\nencoder",
+        "x": -6.6,
+        "y": 0.0,
+        "w": 2.2,
+        "h": 0.78,
+        "color": "E7E1F0",
+        "branch": "",
+        "part": "vision",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "vision_embedding",
+        "label": "Vision\nembedding",
+        "x": -6.6,
+        "y": 1.12,
+        "w": 2.2,
+        "h": 0.78,
+        "color": "F5D6D7",
+        "branch": "",
+        "part": "vision",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "residual_input",
+        "label": "",
+        "x": -3.2,
+        "y": 2.52,
+        "w": 3.2,
+        "h": 0.4,
+        "color": "E3E6EB",
+        "branch": "",
+        "part": "",
+        "layer": 0,
+        "kind": "text",
+        "size": 12
+      },
+      {
+        "id": "embedding",
+        "label": "Input streams",
+        "x": -3.2,
+        "y": 3.48,
+        "w": 3.1,
+        "h": 0.62,
+        "color": "F5D6D7",
+        "branch": "",
+        "part": "residual",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "encoder_swa",
+        "label": "SWA",
+        "x": -3.2,
+        "y": 4.9,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "F9DDCF",
+        "branch": "encoder",
+        "part": "attention",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "encoder_moe_swa",
+        "label": "MoE",
+        "x": -3.2,
+        "y": 5.84,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "E3E6EB",
+        "branch": "encoder",
+        "part": "ffn",
+        "layer": 0,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "encoder_full",
+        "label": "CSA2 \u00b7 Full",
+        "x": -3.2,
+        "y": 7.5,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "D6ECCF",
+        "branch": "encoder",
+        "part": "attention",
+        "layer": 2,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "encoder_moe_full",
+        "label": "MoE",
+        "x": -3.2,
+        "y": 8.44,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "E3E6EB",
+        "branch": "encoder",
+        "part": "ffn",
+        "layer": 2,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "encoder_reuse",
+        "label": "CSA2 \u00b7 Reuse",
+        "x": -3.2,
+        "y": 10.35,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "FBF0BF",
+        "branch": "encoder",
+        "part": "attention",
+        "layer": 3,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "encoder_moe_reuse",
+        "label": "MoE",
+        "x": -3.2,
+        "y": 11.3,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "E3E6EB",
+        "branch": "encoder",
+        "part": "ffn",
+        "layer": 3,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_full",
+        "label": "CSA2 \u00b7 Full",
+        "x": 3.2,
+        "y": 3.8,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "D6ECCF",
+        "branch": "decoder",
+        "part": "attention",
+        "layer": 20,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_moe_full",
+        "label": "MoE",
+        "x": 3.2,
+        "y": 4.73,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "E3E6EB",
+        "branch": "decoder",
+        "part": "ffn",
+        "layer": 20,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_reuse_first_node",
+        "label": "CSA2 \u00b7 Reuse",
+        "x": 3.2,
+        "y": 6.05,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "FBF0BF",
+        "branch": "decoder",
+        "part": "attention",
+        "layer": 21,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_moe_reuse_first",
+        "label": "MoE",
+        "x": 3.2,
+        "y": 6.98,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "E3E6EB",
+        "branch": "decoder",
+        "part": "ffn",
+        "layer": 21,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_reindex",
+        "label": "CSA2 \u00b7 Reindex",
+        "x": 3.2,
+        "y": 8.85,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "CDE8F4",
+        "branch": "decoder",
+        "part": "attention",
+        "layer": 24,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_moe_reindex",
+        "label": "MoE",
+        "x": 3.2,
+        "y": 9.78,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "E3E6EB",
+        "branch": "decoder",
+        "part": "ffn",
+        "layer": 24,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_reuse",
+        "label": "CSA2 \u00b7 Reuse",
+        "x": 3.2,
+        "y": 11.05,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "FBF0BF",
+        "branch": "decoder",
+        "part": "attention",
+        "layer": 25,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "decoder_moe_reuse",
+        "label": "MoE",
+        "x": 3.2,
+        "y": 11.98,
+        "w": 3.0,
+        "h": 0.64,
+        "color": "E3E6EB",
+        "branch": "decoder",
+        "part": "ffn",
+        "layer": 25,
+        "kind": "box",
+        "size": 13
+      },
+      {
+        "id": "hidden_states",
+        "label": "Encoder output",
+        "x": -3.2,
+        "y": 14.48,
+        "w": 4.0,
+        "h": 0.84,
+        "color": "E9EDF0",
+        "branch": "",
+        "part": "hidden",
+        "layer": 0,
+        "kind": "box",
+        "size": 12
+      },
+      {
+        "id": "kv_label",
+        "label": "Shared KV",
+        "x": 0.2,
+        "y": 4.4,
+        "w": 2.2,
+        "h": 0.35,
+        "color": "E3E6EB",
+        "branch": "",
+        "part": "memory",
+        "layer": 0,
+        "kind": "text",
+        "size": 12
+      },
+      {
+        "id": "candidate_pool",
+        "label": "Candidate\npool",
+        "x": 7.05,
+        "y": 3.8,
+        "w": 2.25,
+        "h": 0.88,
+        "color": "D8D8E9",
+        "branch": "",
+        "part": "indexer",
+        "layer": 0,
+        "kind": "box",
+        "size": 12
+      },
+      {
+        "id": "engram",
+        "label": "Engram \u00d72",
+        "x": -7.0,
+        "y": 7.52,
+        "w": 2.0,
+        "h": 0.67,
+        "color": "E7E1F0",
+        "branch": "",
+        "part": "engram",
+        "layer": 0,
+        "kind": "box",
+        "size": 13,
+        "module_layers": [
+          1,
+          14
+        ]
+      },
+      {
+        "id": "dspark",
+        "label": "DSpark drafts",
+        "x": 6.9,
+        "y": 14.85,
+        "w": 2.6,
+        "h": 0.85,
+        "color": "D8D8E9",
+        "branch": "auxiliary",
+        "part": "speed",
+        "layer": 0,
+        "kind": "box",
+        "size": 13,
+        "target_layers": [
+          37,
+          38,
+          39
+        ]
+      },
+      {
+        "id": "output",
+        "label": "Output tokens",
+        "x": 3.2,
+        "y": 16.3,
+        "w": 3.1,
+        "h": 0.65,
+        "color": "E3E6EB",
+        "branch": "",
+        "part": "head",
+        "layer": 0,
+        "kind": "text",
+        "size": 13
+      },
+      {
+        "id": "compression_encoder",
+        "label": "2:1 compression",
+        "x": -3.2,
+        "y": 12.7,
+        "w": 3.7,
+        "h": 0.32,
+        "color": "E3E6EB",
+        "branch": "",
+        "part": "",
+        "layer": 0,
+        "kind": "text",
+        "size": 12
+      },
+      {
+        "id": "compression_decoder",
+        "label": "1:1 compression",
+        "x": 3.2,
+        "y": 12.85,
+        "w": 3.7,
+        "h": 0.32,
+        "color": "E3E6EB",
+        "branch": "",
+        "part": "",
+        "layer": 0,
+        "kind": "text",
+        "size": 12
+      },
+      {
+        "id": "target_head",
+        "label": "Output head",
+        "x": 3.2,
+        "y": 14.85,
+        "w": 3.1,
+        "h": 0.7,
+        "color": "D8D8E9",
+        "branch": "decoder",
+        "part": "head",
+        "layer": 39,
+        "kind": "box",
+        "size": 13
+      }
+    ],
+    "edges": [
+      {
+        "id": "vision_encoder_projection",
+        "path": [
+          [
+            -6.6,
+            0.39
+          ],
+          [
+            -6.6,
+            0.73
+          ]
+        ],
+        "source": "vision_encoder",
+        "target": "vision_embedding",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -6.6,
+            0.39,
+            0.55
+          ],
+          [
+            -6.6,
+            0.73,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "vision_input",
+        "path": [
+          [
+            -6.6,
+            1.51
+          ],
+          [
+            -6.6,
+            2.1
+          ],
+          [
+            -3.2,
+            2.1
+          ],
+          [
+            -3.2,
+            3.17
+          ]
+        ],
+        "source": "vision_embedding",
+        "target": "embedding",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -6.6,
+            1.51,
+            0.55
+          ],
+          [
+            -6.6,
+            2.1,
+            0.72
+          ],
+          [
+            -3.2,
+            2.1,
+            0.72
+          ],
+          [
+            -3.2,
+            3.17,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "text_input",
+        "path": [
+          [
+            -3.2,
+            1.595
+          ],
+          [
+            -3.2,
+            3.17
+          ]
+        ],
+        "source": "text_embedding",
+        "target": "embedding",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -3.2,
+            1.595,
+            0.55
+          ],
+          [
+            -3.2,
+            3.17,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "embedding_to_encoder_swa",
+        "path": [
+          [
+            -3.2,
+            3.8
+          ],
+          [
+            -3.2,
+            4.58
+          ]
+        ],
+        "source": "embedding",
+        "target": "encoder_swa",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -3.2,
+            3.8,
+            0.55
+          ],
+          [
+            -3.2,
+            4.58,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_swa_to_encoder_moe_swa",
+        "path": [
+          [
+            -3.2,
+            5.220000000000001
+          ],
+          [
+            -3.2,
+            5.52
+          ]
+        ],
+        "source": "encoder_swa",
+        "target": "encoder_moe_swa",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -3.2,
+            5.220000000000001,
+            0.55
+          ],
+          [
+            -3.2,
+            5.52,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_moe_swa_to_encoder_full",
+        "path": [
+          [
+            -3.2,
+            6.16
+          ],
+          [
+            -3.2,
+            7.18
+          ]
+        ],
+        "source": "encoder_moe_swa",
+        "target": "encoder_full",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -3.2,
+            6.16,
+            0.55
+          ],
+          [
+            -3.2,
+            7.18,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_full_to_encoder_moe_full",
+        "path": [
+          [
+            -3.2,
+            7.82
+          ],
+          [
+            -3.2,
+            8.12
+          ]
+        ],
+        "source": "encoder_full",
+        "target": "encoder_moe_full",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -3.2,
+            7.82,
+            0.55
+          ],
+          [
+            -3.2,
+            8.12,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_moe_full_to_encoder_reuse",
+        "path": [
+          [
+            -3.2,
+            8.76
+          ],
+          [
+            -3.2,
+            10.03
+          ]
+        ],
+        "source": "encoder_moe_full",
+        "target": "encoder_reuse",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -3.2,
+            8.76,
+            0.55
+          ],
+          [
+            -3.2,
+            10.03,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_reuse_to_encoder_moe_reuse",
+        "path": [
+          [
+            -3.2,
+            10.67
+          ],
+          [
+            -3.2,
+            10.98
+          ]
+        ],
+        "source": "encoder_reuse",
+        "target": "encoder_moe_reuse",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -3.2,
+            10.67,
+            0.55
+          ],
+          [
+            -3.2,
+            10.98,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_full_to_decoder_moe_full",
+        "path": [
+          [
+            3.2,
+            4.12
+          ],
+          [
+            3.2,
+            4.41
+          ]
+        ],
+        "source": "decoder_full",
+        "target": "decoder_moe_full",
+        "role": "flow",
+        "spatial_path": [
+          [
+            3.2,
+            4.12,
+            0.55
+          ],
+          [
+            3.2,
+            4.41,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_moe_full_to_decoder_reuse_first_node",
+        "path": [
+          [
+            3.2,
+            5.050000000000001
+          ],
+          [
+            3.2,
+            5.7299999999999995
+          ]
+        ],
+        "source": "decoder_moe_full",
+        "target": "decoder_reuse_first_node",
+        "role": "flow",
+        "spatial_path": [
+          [
+            3.2,
+            5.050000000000001,
+            0.55
+          ],
+          [
+            3.2,
+            5.7299999999999995,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_reuse_first_node_to_decoder_moe_reuse_first",
+        "path": [
+          [
+            3.2,
+            6.37
+          ],
+          [
+            3.2,
+            6.66
+          ]
+        ],
+        "source": "decoder_reuse_first_node",
+        "target": "decoder_moe_reuse_first",
+        "role": "flow",
+        "spatial_path": [
+          [
+            3.2,
+            6.37,
+            0.55
+          ],
+          [
+            3.2,
+            6.66,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_moe_reuse_first_to_decoder_reindex",
+        "path": [
+          [
+            3.2,
+            7.300000000000001
+          ],
+          [
+            3.2,
+            8.53
+          ]
+        ],
+        "source": "decoder_moe_reuse_first",
+        "target": "decoder_reindex",
+        "role": "flow",
+        "spatial_path": [
+          [
+            3.2,
+            7.300000000000001,
+            0.55
+          ],
+          [
+            3.2,
+            8.53,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_reindex_to_decoder_moe_reindex",
+        "path": [
+          [
+            3.2,
+            9.17
+          ],
+          [
+            3.2,
+            9.459999999999999
+          ]
+        ],
+        "source": "decoder_reindex",
+        "target": "decoder_moe_reindex",
+        "role": "flow",
+        "spatial_path": [
+          [
+            3.2,
+            9.17,
+            0.55
+          ],
+          [
+            3.2,
+            9.459999999999999,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_moe_reindex_to_decoder_reuse",
+        "path": [
+          [
+            3.2,
+            10.1
+          ],
+          [
+            3.2,
+            10.73
+          ]
+        ],
+        "source": "decoder_moe_reindex",
+        "target": "decoder_reuse",
+        "role": "flow",
+        "spatial_path": [
+          [
+            3.2,
+            10.1,
+            0.55
+          ],
+          [
+            3.2,
+            10.73,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_reuse_to_decoder_moe_reuse",
+        "path": [
+          [
+            3.2,
+            11.370000000000001
+          ],
+          [
+            3.2,
+            11.66
+          ]
+        ],
+        "source": "decoder_reuse",
+        "target": "decoder_moe_reuse",
+        "role": "flow",
+        "spatial_path": [
+          [
+            3.2,
+            11.370000000000001,
+            0.55
+          ],
+          [
+            3.2,
+            11.66,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "encoder_output",
+        "path": [
+          [
+            -3.2,
+            11.62
+          ],
+          [
+            -3.2,
+            14.175
+          ]
+        ],
+        "source": "encoder_moe_reuse",
+        "target": "hidden_states",
+        "role": "flow",
+        "spatial_path": [
+          [
+            -3.2,
+            11.62,
+            0.55
+          ],
+          [
+            -3.2,
+            14.175,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "ced_to_decoder",
+        "path": [
+          [
+            -3.2,
+            14.79
+          ],
+          [
+            0.1,
+            14.79
+          ],
+          [
+            0.1,
+            2.37
+          ],
+          [
+            3.2,
+            2.37
+          ],
+          [
+            3.2,
+            3.48
+          ]
+        ],
+        "source": "hidden_states",
+        "target": "decoder_full",
+        "role": "ced",
+        "spatial_path": [
+          [
+            -3.2,
+            14.79,
+            0.55
+          ],
+          [
+            0.1,
+            14.79,
+            1.7
+          ],
+          [
+            0.1,
+            2.37,
+            1.7
+          ],
+          [
+            3.2,
+            2.37,
+            1.7
+          ],
+          [
+            3.2,
+            3.48,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "shared_kv",
+        "path": [
+          [
+            0.1,
+            3.8
+          ],
+          [
+            1.7,
+            3.8
+          ]
+        ],
+        "source": "hidden_states",
+        "target": "decoder_full",
+        "role": "shared_kv",
+        "spatial_path": [
+          [
+            0.1,
+            3.8,
+            0.55
+          ],
+          [
+            1.7,
+            3.8,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "candidate_index",
+        "path": [
+          [
+            4.7,
+            3.8
+          ],
+          [
+            5.925,
+            3.8
+          ]
+        ],
+        "source": "decoder_full",
+        "target": "candidate_pool",
+        "role": "indexer",
+        "spatial_path": [
+          [
+            4.7,
+            3.8,
+            0.55
+          ],
+          [
+            5.925,
+            3.8,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "candidate_reindex",
+        "path": [
+          [
+            7.05,
+            4.24
+          ],
+          [
+            7.05,
+            8.85
+          ],
+          [
+            4.7,
+            8.85
+          ]
+        ],
+        "source": "candidate_pool",
+        "target": "decoder_reindex",
+        "role": "reindex",
+        "spatial_path": [
+          [
+            7.05,
+            4.24,
+            0.55
+          ],
+          [
+            7.05,
+            8.85,
+            0.72
+          ],
+          [
+            4.7,
+            8.85,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "engram_to_swa",
+        "path": [
+          [
+            -6,
+            7.52
+          ],
+          [
+            -5.72,
+            7.52
+          ],
+          [
+            -5.72,
+            4.9
+          ],
+          [
+            -4.7,
+            4.9
+          ]
+        ],
+        "source": "engram",
+        "target": "encoder_swa",
+        "role": "conditional",
+        "target_layer": 1,
+        "grouped_target": true,
+        "spatial_path": [
+          [
+            -6,
+            7.52,
+            0.55
+          ],
+          [
+            -5.72,
+            7.52,
+            0.72
+          ],
+          [
+            -5.72,
+            4.9,
+            0.72
+          ],
+          [
+            -4.7,
+            4.9,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "engram_to_full",
+        "path": [
+          [
+            -6,
+            7.52
+          ],
+          [
+            -4.7,
+            7.52
+          ]
+        ],
+        "source": "engram",
+        "target": "encoder_full",
+        "role": "conditional",
+        "target_layer": 14,
+        "grouped_target": true,
+        "spatial_path": [
+          [
+            -6,
+            7.52,
+            0.55
+          ],
+          [
+            -4.7,
+            7.52,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_draft",
+        "path": [
+          [
+            3.2,
+            12.3
+          ],
+          [
+            3.2,
+            13.9
+          ],
+          [
+            6.9,
+            13.9
+          ],
+          [
+            6.9,
+            14.425
+          ]
+        ],
+        "source": "decoder_moe_reuse",
+        "target": "dspark",
+        "role": "draft",
+        "source_layers": [
+          37,
+          38,
+          39
+        ],
+        "spatial_path": [
+          [
+            3.2,
+            12.3,
+            0.55
+          ],
+          [
+            3.2,
+            13.9,
+            0.72
+          ],
+          [
+            6.9,
+            13.9,
+            0.72
+          ],
+          [
+            6.9,
+            14.425,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "decoder_head",
+        "source": "decoder_moe_reuse",
+        "target": "target_head",
+        "role": "flow",
+        "path": [
+          [
+            3.2,
+            12.3
+          ],
+          [
+            3.2,
+            14.5
+          ]
+        ],
+        "spatial_path": [
+          [
+            3.2,
+            12.3,
+            0.55
+          ],
+          [
+            3.2,
+            14.5,
+            0.55
+          ]
+        ]
+      },
+      {
+        "id": "head_output",
+        "source": "target_head",
+        "target": "output",
+        "role": "flow",
+        "path": [
+          [
+            3.2,
+            15.2
+          ],
+          [
+            3.2,
+            15.95
+          ]
+        ],
+        "spatial_path": [
+          [
+            3.2,
+            15.2,
+            0.55
+          ],
+          [
+            3.2,
+            15.95,
+            0.55
+          ]
+        ]
+      }
+    ],
+    "frames": [
+      {
+        "id": "encoder_panel",
+        "x": -3.2,
+        "y": 8.0,
+        "w": 4.95,
+        "h": 10.2,
+        "label": "Causal encoder \u00b7 20",
+        "tx": -3.2,
+        "ty": 13.6,
+        "branch": "encoder",
+        "layer": 0,
+        "dashed": false
+      },
+      {
+        "id": "decoder_panel",
+        "x": 3.2,
+        "y": 8.0,
+        "w": 4.95,
+        "h": 10.2,
+        "label": "Decoder \u00b7 20",
+        "tx": 3.2,
+        "ty": 13.6,
+        "branch": "decoder",
+        "layer": 0,
+        "dashed": false
+      },
+      {
+        "id": "swa_repeat",
+        "x": -3.2,
+        "y": 5.4,
+        "w": 4.2,
+        "h": 2.1,
+        "label": "\u00d72",
+        "tx": -0.83,
+        "ty": 5.4,
+        "branch": "encoder",
+        "layer": 0,
+        "dashed": true
+      },
+      {
+        "id": "encoder_group",
+        "x": -3.2,
+        "y": 9.6,
+        "w": 4.2,
+        "h": 5.5,
+        "label": "\u00d73",
+        "tx": -0.83,
+        "ty": 9.4,
+        "branch": "encoder",
+        "layer": 2,
+        "dashed": true
+      },
+      {
+        "id": "encoder_reuse_repeat",
+        "x": -3.2,
+        "y": 10.86,
+        "w": 3.72,
+        "h": 2.15,
+        "label": "\u00d75",
+        "tx": -1.09,
+        "ty": 10.85,
+        "branch": "encoder",
+        "layer": 3,
+        "dashed": true
+      },
+      {
+        "id": "decoder_reuse_first",
+        "x": 3.2,
+        "y": 6.55,
+        "w": 3.72,
+        "h": 2.15,
+        "label": "\u00d73",
+        "tx": 5.3,
+        "ty": 6.55,
+        "branch": "decoder",
+        "layer": 21,
+        "dashed": true
+      },
+      {
+        "id": "decoder_group",
+        "x": 3.2,
+        "y": 10.4,
+        "w": 4.2,
+        "h": 4.6,
+        "label": "\u00d74",
+        "tx": 5.6,
+        "ty": 10.3,
+        "branch": "decoder",
+        "layer": 24,
+        "dashed": true
+      },
+      {
+        "id": "decoder_reuse_repeat",
+        "x": 3.2,
+        "y": 11.55,
+        "w": 3.72,
+        "h": 2.1,
+        "label": "\u00d73",
+        "tx": 5.3,
+        "ty": 11.55,
+        "branch": "decoder",
+        "layer": 25,
+        "dashed": true
+      }
+    ],
+    "bounds": [
+      -8.4,
+      8.5,
+      -0.65,
+      17.3
+    ]
+  }
+]

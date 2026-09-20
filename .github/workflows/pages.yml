@@ -1,0 +1,44 @@
+name: Deploy 3D architecture tool
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'models/3d_model_arch_tool/**'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Build Pages tree
+        run: |
+          mkdir -p _site/3d_models
+          cp -a models/3d_model_arch_tool/. _site/3d_models/
+          touch _site/.nojekyll
+          printf '%s\n' '<!doctype html><meta charset="utf-8"><title>InfraTech Architecture 3D</title><script>location.replace("./3d_models/");</script><p><a href="./3d_models/">Open the 3D architecture tool</a></p>' > _site/index.html
+          printf '%s\n' '<!doctype html><meta charset="utf-8"><title>InfraTech Architecture 3D</title><script>location.replace("./3d_models/");</script><p><a href="./3d_models/">Open the 3D architecture tool</a></p>' > _site/404.html
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

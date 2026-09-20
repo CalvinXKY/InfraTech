@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#efe8dc">
+  <meta name="description" content="InfraTech Architecture 3D: compare Qwen3.8, DeepSeek V4, and other model stacks.">
+  <title>Qwen3.8 vs DeepSeek V4 Architecture 3D</title>
+  <script>
+    (function () {
+      var path = location.pathname;
+      var last = path.split('/').pop() || '';
+      if (last && last.indexOf('.') === -1 && path.slice(-1) !== '/') {
+        location.replace(path + '/' + location.search + location.hash);
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css?v=models6">
+  <script type="importmap">{"imports":{"three":"./vendor/build/three.module.js","three/addons/":"./vendor/examples/jsm/"}}</script>
+</head>
+<body data-theme="light">
+  <header class="app-header">
+    <a class="brand" href="https://github.com/CalvinXKY/InfraTech/tree/main/models" target="_blank" rel="noopener" title="Open the InfraTech models directory">
+      InfraTech
+      <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v5M19 5 10 14M7 7H5v12h12v-2"/></svg>
+    </a>
+    <h1 id="app-title">Qwen3.8 vs DeepSeek V4 Architecture 3D</h1>
+    <div class="header-actions">
+      <div class="theme-switch" role="group" aria-label="Theme">
+        <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+        <button type="button" data-theme="light" aria-pressed="true">Light</button>
+      </div>
+      <button id="home" class="quiet-button" aria-label="Show the whole architecture" title="Overview">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5M8 8h8v8H8z"/></svg><span>Overview</span>
+      </button>
+      <button id="sources" class="icon-button quiet-button" aria-label="Sources" title="Sources"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h6a3 3 0 0 1 2 1 3 3 0 0 1 2-1h6v15h-6a3 3 0 0 0-2 1 3 3 0 0 0-2-1H4zM12 5v15"/></svg></button>
+      <button id="story-toggle" class="story-button" aria-label="Start the one-minute story" aria-pressed="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7z"/></svg><span id="story-toggle-label">Story mode</span><span id="story-duration">1 min</span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <section id="scene-wrap" aria-label="Spatial architecture comparison">
+      <canvas id="scene" aria-label="Interactive 3D architecture"></canvas>
+      <div id="labels"></div>
+      <div id="loading">Opening the architectures…</div>
+      <button id="selection" class="selection" hidden title="Return to the overview"><span id="selection-name"></span><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg></button>
+    </section>
+    <footer id="explore-controls" class="explore-controls">
+      <div class="transport">
+        <button id="play" class="icon-button" aria-label="Pause token flow" title="Pause"></button>
+        <label class="pace"><span>Speed</span><select id="pace" aria-label="Animation speed"><option value="0.4">0.4×</option><option value="1" selected>1×</option><option value="2">2×</option></select></label>
+      </div>
+      <nav class="models" aria-label="Architecture">
+        <div class="model-pick" data-era="0">
+          <button type="button" class="model-tab active" data-era="0" aria-pressed="true">
+            <span class="year">2026</span><strong>Qwen3.8-Flash-Next</strong><span class="count">48 layers · 10+1 / 512</span>
+          </button>
+          <select aria-label="Left architecture"></select>
+        </div>
+        <div class="model-pick" data-era="1">
+          <button type="button" class="model-tab" data-era="1" aria-pressed="false">
+            <span class="year">2026</span><strong>DeepSeek V4</strong><span class="count">61 layers · 6+1 / 384</span>
+          </button>
+          <select aria-label="Right architecture"></select>
+        </div>
+      </nav>
+    </footer>
+    <section id="story-panel" class="story-panel" aria-label="Guided story" hidden>
+      <div id="story-models" class="story-models"><span data-story-model="0"><small>2026</small>Qwen3.8</span><span data-story-model="1"><small>2026</small>DeepSeek V4</span></div>
+      <div class="story-copy" aria-live="polite" aria-atomic="true"><p id="story-kicker" class="story-kicker"></p><h2 id="story-title"></h2><p id="story-caption"></p></div>
+      <div class="story-controls">
+        <button id="story-previous" class="icon-button" aria-label="Previous chapter" title="Previous chapter"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 6-6 6 6 6"/></svg></button>
+        <button id="story-play" class="icon-button" aria-label="Pause story" title="Pause story"></button>
+        <button id="story-next" class="icon-button" aria-label="Next chapter" title="Next chapter"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg></button>
+        <button id="story-exit" class="icon-button" aria-label="Exit story and explore" title="Exit story"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button>
+      </div>
+      <nav id="story-chapters" class="story-chapters" aria-label="Story chapters"></nav>
+      <output id="story-time" class="story-time" aria-label="Story playback time">0:00 / 1:00</output>
+    </section>
+  </main>
+  <dialog id="source-dialog"><div class="dialog-top"><h2>Sources & assumptions</h2><button id="close-sources" class="icon-button" aria-label="Close sources"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div><div id="source-content"></div></dialog>
+  <script type="module" src="app.js?v=models14"></script>
+  <script type="module" src="theme-toggle.js?v=2"></script>
+</body>
+</html>
