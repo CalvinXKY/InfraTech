@@ -166,6 +166,7 @@
 | [LLM大模型显存计算公式与优化](https://zhuanlan.zhihu.com/p/687226668)                         | LLM     | 🔥🔥🔥                                                                                |
 | [LLM预训练模型MFU计算器](https://zhuanlan.zhihu.com/p/20401860293)                        | LLM     | [link](https://calvinxky.github.io/mfu_calculation/)                                  |
 | [DeepSeekV3 MFU计算工具与算式](https://zhuanlan.zhihu.com/p/26107304514)                 | LLM     | [link](https://calvinxky.github.io/mfu_calculation/deepseek3mfu.html)                 |
+| [3D 模型架构对照工具](./models/3d_model_arch_tool/README.md)                              | LLM     | [Pages](https://calvinxky.github.io/InfraTech/3d_models) · [源码](./models/3d_model_arch_tool) |
 | [PyTorch显存可视化与Snapshot数据分析](https://zhuanlan.zhihu.com/p/677203832)               | PyTorch | [link](https://github.com/CalvinXKY/BasicCUDA/tree/master/pytorch/torch_mem_snapshot) |
 | [PyTorch结构可视化：交互式DeepSeekV3计算图](https://zhuanlan.zhihu.com/p/1977414887736112704) | PyTorch | [link](./pytorch_vista)                                                               |
 

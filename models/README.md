@@ -16,6 +16,13 @@
 | [Qwen3-VL](./qwen3_vl) | DeepStack+Interleaved-MRoPE | 32B；235B/22B | 256K | 2025年10月 |
 | [Step 3.5 Flash](./step_3_5_flash) | GQA+SWA+MoE+MTP | 196B/11B | 256K | 2026年2月 |
 
+## 🧊 3D 架构对照
+
+交互式 3D 对照工具（左右各选一个模型）：见 [3d_model_arch_tool](./3d_model_arch_tool)。
+
+- 本地启动与按键说明：[README](./3d_model_arch_tool/README.md)
+- 在线：https://calvinxky.github.io/InfraTech/3d_models
+
 ## 🖼️架构图索引
 
 - [DeepSeek V3模型卡片](./deepseek_v3)
